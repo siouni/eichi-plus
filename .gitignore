@@ -1,3 +1,8 @@
+models
+outputs
+swap_store
+hf_download
+eichi_plus/node/work
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
