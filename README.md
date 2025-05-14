@@ -13,6 +13,28 @@
 これで、自分の環境では、1秒の動画で6分程度、4秒の動画で15分程度で生成出来ています。  
 個人的には、実用範囲かなというところです。
 
+## インストール&使い方
+基本的には、本家[lllyasviel/FramePack](https://github.com/lllyasviel/FramePack)と同じです。  
+FramePack-eichiの派生ではありますが、本家とeichiはマージした状態になっています。  
+また、Windows環境でしか試してないので、Linuxはどうなるかわかりません。（多分動くんじゃないかな？）  
+下記は環境構築とインストールの例です。  
+uvはなくても問題ないと思います。  
+CUDA 12.6は別途インストールしておいて下さい。
+
+``` CLI
+# 注意！ Windows環境用です
+git clone https://github.com/siouni/eichi-plus.git
+uv venv venv --python 3.11
+venv\Scripts\activate
+uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+uv pip install flash-attn --no-build-isolation
+# 上記コマンドは、キャッシュが無い場合一晩程度かかりました。（環境依存とは思います。）
+uv pip install https://github.com/woct0rdho/triton-windows/releases/download/v3.2.0-windows.post10/triton-3.2.0-cp311-cp311-win_amd64.whl
+uv pip install https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu126torch2.6.0-cp311-cp311-win_amd64.whl
+uv pip install -r requirements.txt
+python eichi-plus.py run-gradio
+```
+
 ## 開発方針
 FramePack-eichiのコードのコメントから、Diffusers依存を減らす方向？のようですが、私はDiffusersにガッツリ依存してもいいと思っているので、その方向性で改造していきます。  
 できるだけ、既存ライブラリで対応できるものは既存ライブラリを使う方針です。
@@ -23,6 +45,7 @@ FramePack-eichiのコードのコメントから、Diffusers依存を減らす�
   - 動画のフレーム抽出機能の追加
   - 画像のアップスケール機能の追加
   - SDXL系をDiffusersから利用して統合、初期フレーム画像の生成や、フレームのi2iを行えるようにする。
+  - どこかのタイミングでLoRA機能とLoRA学習機能を追加したい、気がする。
 
 その他、思いついたり、参考にできる機能があれば気分次第で追加します。  
 要望があればissueや[X](https://x.com/siouni_unia)のDMなどに連絡いただければ、気分次第で対応したりしなかったり。
@@ -30,6 +53,7 @@ FramePack-eichiのコードのコメントから、Diffusers依存を減らす�
 **支援のお願い**  
 貧乏なのでグラボが買えません。  
 余裕のある方はもしよければ、下記サイトなどからご支援いただけると嬉しいです。  
+
 [![OFUSE](https://github.com/user-attachments/assets/62ffa121-f975-4080-923a-7f55f3cf3759)](https://ofuse.me/siouni)
 
 [mond](https://mond.how/ja/siouni_unia)  
