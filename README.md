@@ -27,6 +27,7 @@ git clone https://github.com/siouni/eichi-plus.git
 uv venv venv --python 3.11
 venv\Scripts\activate
 uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+uv pip install xformers
 uv pip install flash-attn --no-build-isolation
 # 上記コマンドは、キャッシュが無い場合一晩程度かかりました。（環境依存とは思います。）
 uv pip install https://github.com/woct0rdho/triton-windows/releases/download/v3.2.0-windows.post10/triton-3.2.0-cp311-cp311-win_amd64.whl
