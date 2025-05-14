@@ -31,7 +31,7 @@ FramePack-eichiのコードのコメントから、Diffusers依存を減らす�
 貧乏なのでグラボが買えません。  
 余裕のある方はもしよければ、下記サイトなどからご支援いただけると嬉しいです。  
 [OFUSE](https://ofuse.me/siouni)  
-![Image](https://github.com/user-attachments/assets/62ffa121-f975-4080-923a-7f55f3cf3759)
+<img src="https://github.com/user-attachments/assets/62ffa121-f975-4080-923a-7f55f3cf3759" alt="OFUSE">
 
 [mond](https://mond.how/ja/siouni_unia)  
 匿名メッセージを募集しています。  
