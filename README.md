@@ -58,7 +58,7 @@ FramePack-eichiのコードのコメントから、Diffusers依存を減らす�
 [![OFUSE](https://github.com/user-attachments/assets/62ffa121-f975-4080-923a-7f55f3cf3759)](https://ofuse.me/siouni)
 
 [mond](https://mond.how/ja/siouni_unia)  
-匿名メッセージを募集しています。  
+mondで匿名投稿・質問を受け付けています。  
 質問などはこちらでも構いません。
 
 [prompton](https://prompton.io/siouni_unia)  

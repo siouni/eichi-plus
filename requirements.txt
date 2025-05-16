@@ -15,3 +15,6 @@ opencv-contrib-python
 safetensors
 
 setuptools
+
+watchgod
+esbuild
